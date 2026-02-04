@@ -1,0 +1,21 @@
+html, body{
+    height: 100%;
+}
+.color-left {
+    background-color: greenyellow;
+    height:100%;
+    text-align: center;
+}
+.color-right {
+    background-color: orange;
+    height: 100%;
+    text-align: center;
+    }
+table,tbody{
+    width: 100%;
+    height: 100%;
+}
+td,tr{
+    width: 50%;
+    height: 100%;
+}

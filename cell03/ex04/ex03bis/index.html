@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('button').on('click', function(){
+                const newLine = prompt("Enter new To do list:");
+        
+                if (newLine && newLine.trim() !== "") {
+                    $('#ft_list').prepend(`<div>${newLine}</div>`);
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id ="ft_list">
+        <ol>
+            
+        </ol>
+    </div>
+    <button onclick="newToDoList()">New</button>
+</body>
+</html>

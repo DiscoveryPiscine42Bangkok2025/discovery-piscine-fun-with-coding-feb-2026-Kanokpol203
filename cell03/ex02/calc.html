@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calculate(){
+            let first = 0
+            let second = 0
+            let parameter = ""
+            first = Number(document.getElementById("first").value);
+            second = Number(document.getElementById("second").value);
+            parameter = document.getElementById("parameter").value;
+            let output = 0;
+            if(first < 0){
+                alert("Error :(");
+            }else if(second < 0){
+                alert("Error :(");
+            }
+            switch(parameter){
+                case "+":
+                    alert(first + second);
+                    console.log(first + second);
+                    break;
+                case "-":
+                    alert(first - second);
+                    console.log(first - second);
+                    break;
+                case "*":
+                    alert(first * second);
+                    console.log(first * second);
+                    break;
+                case "/":
+                    if(second == 0){
+                        alert("it's OVER 9000!!!!");
+                        console.log("it's OVER 9000!!!!");
+                        break;
+                    }else{
+                        alert(first / second);
+                        console.log(first / second);
+                        break;
+                    }
+                case "%":
+                    if(second == 0){
+                        alert("it's OVER 9000!!!!");
+                        console.log("it's OVER 9000!!!!");
+                        break;
+                    }else{
+                        alert(first % second);
+                        console.log(first % second);
+                        break;
+                    }
+            }
+        }
+    </script>
+</head>
+<body>
+    <input id="first" type="number">
+    <select name="" id="parameter">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>
+    <input id="second" type="number">
+    <button onclick="calculate()">Try me!</button>
+</body>
+</html>

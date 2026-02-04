@@ -1,0 +1,85 @@
+/* .prallax1{
+    background-image: url("https://pbs.twimg.com/media/GgzHCkGXYAApyUs.jpg");
+    min-height: 950px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:red;
+    background-size: cover;
+    background-position: center;
+}
+.prallax2{
+    background-image: url("https://preview.redd.it/best-boy-4-meme-restored-v0-356zewaoesa91.jpg?width=640&crop=smart&auto=webp&s=869920e266be5aade8a2b38611c823608bfb2637");
+    min-height: 950px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:red;
+    background-size: cover;
+    background-position: center;
+}
+.context{
+    background-size: cover;
+    background-position: center;
+    background-color: black;
+    color:white;
+    min-height: 300px;
+
+}
+@media (prefers-reduced-motion: reduce) {
+  .prallax1, .prallax2 {
+    background-attachment: scroll;
+  }
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+} */
+/* 1. Remove default browser gaps */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/* 2. Unified Parallax Settings */
+.prallax1, .prallax2 {
+    min-height: 950px;
+    background-attachment: fixed; /* The 'magic' property */
+    background-position: center;
+    background-size: cover;       /* Makes image fit the container */
+    background-repeat: no-repeat;
+    
+    /* Centering your text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: red;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+/* 3. Assign specific images */
+.prallax1 {
+    background-image: url("https://pbs.twimg.com/media/GgzHCkGXYAApyUs.jpg");
+}
+
+.prallax2 {
+    background-image: url("https://preview.redd.it/best-boy-4-meme-restored-v0-356zewaoesa91.jpg?width=640&crop=smart&auto=webp&s=869920e266be5aade8a2b38611c823608bfb2637");
+}
+
+/* 4. The Content Spacer */
+.context {
+    background-color: black;
+    color: white;
+    min-height: 300px;
+    padding: 50px; /* Adds space inside so text isn't touching the edges */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

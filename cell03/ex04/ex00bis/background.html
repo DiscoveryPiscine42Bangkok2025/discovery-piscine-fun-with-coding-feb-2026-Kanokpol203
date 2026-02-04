@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+    <script>
+        $(document).ready(function() {
+                    $('button').on('click', function() {
+                        const randomColor = () => Math.floor(Math.random() * 256);
+                        const color = `rgb(${randomColor()}, ${randomColor()}, ${randomColor()})`;
+                        
+                        $('body').css('background-color', color);
+                    });
+        });
+    </script>
+</head>
+<body>
+    <button>change Background</button>
+</body>
+</html>

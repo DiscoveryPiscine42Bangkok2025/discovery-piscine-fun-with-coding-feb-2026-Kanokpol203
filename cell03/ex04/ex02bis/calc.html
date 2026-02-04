@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Trigger calculation when a button is clicked
+            $('button').on('click', function() {
+                // 1. Get values using .val()
+                const first = Number($('#first').val());
+                const second = Number($('#second').val());
+                const op = $('#parameter').val();
+                let result;
+
+                // 2. Validation
+                if (first < 0 || second < 0) {
+                    alert("Error :(");
+                    return;
+                }
+
+                // 3. Logic
+                switch (op) {
+                    case "+": result = first + second; break;
+                    case "-": result = first - second; break;
+                    case "*": result = first * second; break;
+                    case "/":
+                        if (second === 0) {
+                                result = "it's OVER 9000!!!!";
+                            } else {
+                                result = first/second; break;
+                            }
+                    case "%":
+                        if (second === 0) {
+                            result = "it's OVER 9000!!!!";
+                        } else {
+                            result = first%second; break;
+                        }
+                        break;
+                    default:
+                        result = "Invalid Operator";
+                }
+
+                // 4. Output
+                alert(result);
+                console.log("Calculation Result:", result);
+            });
+        });
+    </script>
+</head>
+<body>
+    <input id="first" type="number">
+    <select name="" id="parameter">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>
+    <input id="second" type="number">
+    <button onclick="calculate()">Try me!</button>
+</body>
+</html>
